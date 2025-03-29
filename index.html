@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flea's Speedrun Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()"><img src="img/dark-mode.png" height="40px" width="40px"
+                alt="source: https://www.flaticon.com/free-icon/dark-mode_8338708?term=dark+mode&page=1&position=3&origin=search&related_id=8338708"></button>
+        <h1 id="header-title">&nbsp;</h1>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <input type="text" id="video-url" placeholder="Enter YouTube Video URL" autocomplete="off">
+            <button onclick="loadVideo()">Load Video</button>
+            <div id="video-player"></div>
+
+            <div class="controls">
+
+                <button onclick="moveFrames(-5)">◀◀ 5F ◀◀</button>
+                <button onclick="moveFrames(-1)">◀ 1F ◀</button>
+                <button onclick="moveFrames(1)">▶ 1F ▶</button>
+                <button onclick="moveFrames(5)">▶▶ 5F ▶▶</button>
+
+            </div>
+
+            <div class="fps-container">
+                <label for="fps-input">FPS:</label>
+                <input type="text" id="fps-input" placeholder="30">
+                <button onclick="setCustomFPS()">Set FPS</button>
+                <button id="fps-notification-button" onclick="showFPSNotification()">FPS Info</button>
+            </div>
+
+            <div class="timing">
+                <button onclick="setStartTime()">Set Start Time</button>
+                <button onclick="setEndTime()">Set End Time</button>
+                <button onclick="resetTime()" id="red">Reset Time</button>
+            </div>
+        </div>
+
+        <div id="final-time-container" class="hidden">
+            <div class="final-time-tab">
+                <p>Start Time: <span id="final-start-time">--:--:--.---</span></p>
+                <p>End Time: <span id="final-end-time">--:--:--.---</span></p>
+                <p>Final Time: <span id="final-time">--:--:--.---</span></p>
+
+                <label for="mod-message">Mod Message:</label>
+                <textarea id="mod-message" readonly></textarea>
+                <button onclick="copyModMessage()">Copy Mod Message</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <a href="https://github.com/CattoNamedFlea" target="_blank" id="github-link">
+            <img id="github-logo" src="img/github-mark-white.png" alt="GitHub Logo">
+            <img id="github-profile-img" src="https://avatars.githubusercontent.com/u/116257844?v=4"
+                alt="Profile Picture">
+        </a>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
