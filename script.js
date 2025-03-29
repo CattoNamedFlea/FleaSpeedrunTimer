@@ -154,7 +154,7 @@ function checkFinalTime() {
         document.getElementById('final-end-time').textContent = formatTime(endTime);
         document.getElementById('final-time').textContent = formatTime(finalTime);
 
-        let modMessage = `Mod Message: Start at ${formatTime(startTime)} and end at ${formatTime(endTime)}. Framerate is ${fps} FPS. Final time - ${formatTime(finalTime)}. Retimed with [Flea's Speedrun Timer](https://github.com/CattoNamedFlea)`;
+        let modMessage = `Mod Message: Start at ${formatTime(startTime)} and end at ${formatTime(endTime)}. Framerate is ${fps} FPS. Final time - ${formatTime(finalTime)}. Retimed with [Flea's Speedrun Timer](https://cattonamedflea.github.io/FleaSpeedrunTimer/)`;
 
         typeText(modMessage, "mod-message", 500);
 
